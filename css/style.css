@@ -4,24 +4,175 @@
     font-family: 'Roboto', sans-serif;
 }
 
-
-
-.education-entry, .work-entry, .project-entry {
-  padding-left: 5%;
-  padding-right: 5%;
+#bg {
+  position: fixed; 
+  top: -50%; 
+  left: -50%; 
+  width: 200%; 
+  height: 200%;
 }
+#bg img {
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0; 
+  margin: auto; 
+  min-width: 50%;
+  min-height: 50%;
+}
+
+.background-resp{
+  background-size:100% auto;
+}
+/* prevent image from being to big http://stackoverflow.com/questions/15769229/how-to-prevent-horizontal-scrolling-on-responsive-webpage*/
+
+.container {
+  margin-top: 25px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  color: #B82E00;
+}
+
+
+/*fixed header*/
+
+.scrollable {
+    height: 135px;
+    width: 100% ;
+    margin: 70px auto;
+}
+
+
+
+.header1{
+  height:auto;
+  top:0%;
+  width: 100%; auto
+  max-width:100px;
+  z-index:999;
+  position: fixed;
+
+}
+
+
+
+/* hover of contact me thnxs http://tympanus.net/Tutorials/OriginalHoverEffects/index6.html#*/
+.view {
+    width: 300px;
+    height: 160px;
+    margin: 0px;
+    float: left;
+    border: 10px solid ;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    box-shadow: 1px 1px 2px ;
+    cursor: default;
+    background:  url(images/Contactme.jpg) no-repeat center center
+}
+.view .mask, .view .content {
+    width: 290px;
+    height: 160px;
+    position: absolute;
+    overflow: hidden;
+    top: 6px;
+    left: 10px;
+    background-color: rgba(146,96,91,0.5);
+    opacity:0;
+    transition: all 0.3s ease-in 0.4s;
+
+}
+.view img {
+    display: block;
+    top: -10px;
+    right:10px;
+    position: relative;
+    transition: all 0.4s ease-in-out 0.5s
+
+}
+.view h2 {
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    font-size: 19px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    margin: 40px 0 0 0;
+    opacity:0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    background: transparent;
+    margin: 0px 0px 0px 0px;
+    transform: scale(10);
+    transition: all 0.3s ease-in-out 0.1s;
+}
+.view p {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 14px;
+    position: relative;
+    color: #fff;
+    padding: 10px 20px 20px;
+    text-align: right;
+    opacity:0;
+    transform: scale(10);
+    transition: all 0.3s ease-in-out 0.2s;
+}
+.view a.info {
+    display: inline-block;
+    text-decoration: none;
+    padding: 7px 14px;
+    background: #000;
+    color: #fff;
+    text-transform: uppercase;
+    box-shadow: 0 0 1px #000
+}
+.view a.info:hover {
+    box-shadow: 0 0 5px #000;
+    opacity:0;
+    transform: translateY(100px);
+    transition: all 0.3s ease-in-out 0.1s;
+    transition-delay: 0s; 
+}
+.view:hover .mask {  
+    opacity:1; 
+    transition-delay: 0s;
+}                                                                            
+.view:hover img { 
+    transition-delay: 0s; 
+}
+.view:hover h2 { 
+    opacity: 1;
+    transform: scale(1);
+    transition-delay: 0.1s;
+}
+.view:hover p { 
+    opacity:1; 
+    transform: scale(1);
+    transition-delay: 0.2s;
+}
+.view:hover a.info { 
+    opacity:1;
+    transform: translateY(0px);
+    transition-delay: 0.3s;
+}
+/* */
+.education-entry, .educationonline-entry, .work-entry, .workdescription-entry,.project-entry, .projectimg-entry, .focusarea-entry{
+  padding-left: 5%;
+  padding-right: 5%;}
 
 
 h1 {
 
   font-size: 40px;
-  color: #F5A623;
+  color: black;
   line-height: 48px;
   display: inline;
 }
 
 h2 {
-  font-style: bold;
+  font-weight: bold;
   font-size: 24px;
   color: #999999;
   line-height: 29px;
@@ -36,7 +187,7 @@ h3 {
 }
 
 h4 {
-  font-style: bold;
+  font-weight: bold;
   font-size: 14px;
   color: #4A4A4A;
   line-height: 17px;
@@ -48,6 +199,21 @@ h2, h3, h4, h5 {
   padding-right: 5%;
 }
 
+.txtmargin{
+  margin-right: 50px;
+  padding-right:10%;
+  margin-left: 50px;
+  padding-left:10%;
+}
+
+.txtmargin2{
+  
+  padding-right:10%;
+  margin-left: 50px;
+  padding-left:10%;
+}
+
+
 
 .date-text {
   font-style: italic;
@@ -56,7 +222,12 @@ h2, h3, h4, h5 {
   line-height: 16px;
   float: left;
 }
-
+.online-text {
+  font-style: italic;
+  font-size: 14px;
+  color: #999999;
+  line-height: 16px;
+}
 .location-text {
   font-style: italic;
   font-size: 14px;
@@ -85,15 +256,234 @@ a {
   color: #F3F3F3;
   line-height: 28px;
 }
-
-#skillsH3 {
-  color: #F5AE23;
-  display: none;
+/*bar chart for skills section thnx http://cssdeck.com/labs/animated-skills-bars  */
+h9{
+  font-weight: bold;
+  font-size: 16px;
+  color:yellow;
+}
+.bar { 
+  height:18px; 
+  margin:1px 2px;  
+  position:absolute;
+  border-radius:10px;
+  -moz-box-shadow: 0 1px 0px #fcfcfc inset, 0 1px 0 #bebbb9;
+  -webkit-box-shadow: 0 1px 0px #fcfcfc inset, 0 1px 0 #bebbb9;  
+  box-shadow: 0 1px 0px #fcfcfc inset, 0 1px 0 #bebbb9;   
 }
 
-#skills {
-  display: none;
+.Beginner {
+  width:20%; 
+  -moz-animation:graphic-design 2s ease-out;
+  -webkit-animation:graphic-design 2s ease-out;
+  background-color: #f674a4;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f674a4), to(#e06995));
+  background-image: -webkit-linear-gradient(top, #f674a4, #e06995);
+  background-image: -moz-linear-gradient(top, #f674a4, #e06995);
+  background-image: -ms-linear-gradient(top, #f674a4, #e06995);
+  background-image: -o-linear-gradient(top, #f674a4, #e06995);
+  background-image: linear-gradient(to left, #f674a4, #e06995);
 }
+
+.Intermediate {
+  width:50%;
+  -moz-animation:html-css 2s ease-out;
+  -webkit-animation:html-css 2s ease-out;
+  background-color: #f0bb4b;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f0bb4b), to(#d9aa44));
+  background-image: -webkit-linear-gradient(top, #f0bb4b, #d9aa44);
+  background-image: -moz-linear-gradient(top, #f0bb4b, #d9aa44);
+  background-image: -ms-linear-gradient(top, #f0bb4b, #d9aa44);
+  background-image: -o-linear-gradient(top, #f0bb4b, #d9aa44);
+  background-image: linear-gradient(to top, #f0bb4b, #d9aa44);
+}
+
+.Advance {
+  width:100%;
+  -moz-animation:jquery 2s ease-out;
+  -webkit-animation:jquery 2s ease-out;
+  background-color: #a1ce5b;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#a1ce5b), to(#91ba52));
+  background-image: -webkit-linear-gradient(top, #a1ce5b, #91ba52);
+  background-image: -moz-linear-gradient(top, #a1ce5b, #91ba52);
+  background-image: -ms-linear-gradient(top, #a1ce5b, #91ba52);
+  background-image: -o-linear-gradient(top, #a1ce5b, #91ba52);
+  background-image: linear-gradient(to top, #a1ce5b, #91ba52);
+}
+
+
+@-moz-keyframes Beginner {0%  { width:0px;} 100%{ width:20%;}  }
+@-moz-keyframes Intermediate { 0%  { width:0px;} 100%{ width:50%;}  }
+@-moz-keyframes Advance { 0%  { width:0px;} 100%{ width:100%;}  }
+
+
+@-webkit-keyframes Beginner{ 0%  { width:0px;} 100%{ width:20%;}  }
+@-webkit-keyframes Intermediate { 0%  { width:0px;} 100%{ width:50%;}  }
+@-webkit-keyframes Advance{ 0%  { width:0px;} 100%{ width:100%;}  }
+
+/* end bar chart for skills
+
+
+
+
+
+/*callout for skills area  thnxs http://tuljo.com/web-development/flyout-css#*/
+.callout{
+  height:100px;
+  float:left;
+  overflow:hidden;/*good to have here, shows out well if height too short*/
+  width:120px; /*horisontal space for callout text*/
+}
+a .callout-sub{
+  display:none;
+}
+.callout a:hover,
+a:hover .callout-sub{
+  display:block;
+  text-decoration:none;
+}
+.callout-sub{
+  background:brown;
+  color:#333;
+}
+
+
+/*set the height of the focus section */
+.wrapper1 {
+  border: none;
+  padding: 15% 0 0 0;
+}
+
+
+/* focus area graph - http://www.marcofolio.net/css/  */
+.h8 {
+  font-style: italic;
+  font-size: 12px;
+  color: yellow;
+  line-height: 22px;
+}
+.p1{  font-size: 12px;
+  color: orange;
+  line-height: 21px;}
+
+
+ /* focus area graph hover*/
+
+/* BAR CHART */
+
+h7 {
+  font-style: italic;
+  font-size: 14px;
+  color: #000000;
+  line-height: 35px;
+}
+#wrapper { width:440px; margin:40px }
+/* BAR CHART */
+#bar { list-style:none; padding:0px 0px 0px 0px; width:200px;   }
+#bar li { }
+/*margin:-30px 0 0 600px*/
+/* Last bottom should have a shadow */
+#bar li div.bottom { -moz-box-shadow: 0 10px 10px hsla(0,0%,0%,.2); -webkit-box-shadow: 0 10px 30px hsla(0,0%,0%,.2); box-shadow: 0 10px 30px hsla(0,0%,0%,.2); }
+
+/* Ellipse top */
+#bar li div.top { background-color:rgba(213,238,241,0.5); position:relative; float:left; margin-left:10px;
+  width:40px; height:80px; -moz-border-radius: 40px/100px; -webkit-border-radius: 40px 100px; border-radius: 40px/100px;
+  -webkit-transition-property: margin-left;
+  -webkit-transition-duration: 500ms;
+}
+#bar li div.top img { margin-left:5px; margin-top:15px; }
+
+/* Bar bottom */
+#bar li div.bottom { position:relative; margin:5px 0; width:50px;
+  height:80px; -moz-border-radius: 40px/100px; -webkit-border-radius: 40px 100px; border-radius: 40px/100px;
+  background:-moz-linear-gradient(-90deg, #97a7a9, #b8cbcd); background:-webkit-gradient(linear, 0 top, 0 bottom, from(#97a7a9), to(#b8cbcd));
+  -webkit-transition-property: width;
+  -webkit-transition-duration: 500ms;
+}
+#bar li div.bottom div.infobox { padding:20px 0 0 205px;
+  -webkit-transition-property: color;
+  -webkit-transition-duration: 500ms;
+}
+#bar li div.bottom div.infobox h3 { font-family:Georgia,serif,Times; }
+#bar li div.bottom div.infobox p { font-family:"Lucida Grande",Arial,Helvetica,Sans-Serif; opacity: 0;
+  -webkit-transition-property: opacity;
+  -webkit-transition-duration: 500ms;
+}
+
+/* General hover actions */
+#bar li:hover div.bottom div.infobox { color:#eee; text-shadow: 0px 5px 5px #111; }
+#bar li:hover div.bottom div.infobox p { opacity:1; }
+
+/* web development bar */
+#webdev div.top { z-index:99; }
+#webdev div.bottom { z-index:98; height:85px; }
+#webdev:hover div.top { z-index:999; background-color:#1f81ac; margin-left:40px; }
+#webdev:hover div.bottom { z-index:998; background-color:#1a6c90; width:310px;
+  background:-moz-linear-gradient(-90deg, #1a6c90, #14506b); background:-webkit-gradient(linear, 0 top, 0 bottom, from(#1a6c90), to(#14506b)); }
+
+
+/* data development bar */
+#datadev div.top { z-index:97; }
+#datadev div.bottom { z-index:96; height:130px; }
+#datadev:hover div.top { z-index:997; background-color:#bc003c; margin-left:150px; }
+#datadev:hover div.bottom { z-index:996; background-color:#9d0032; width:310px;
+  background:-moz-linear-gradient(-90deg, #9d0032, #7a0027); background:-webkit-gradient(linear, 0 top, 0 bottom, from(#9d0032), to(#7a0027)); }
+
+
+/* data management bar*/
+#datamgnt div.top { z-index:95; }
+#datamgnt div.bottom { z-index:94; height:130px; }
+#datamgnt:hover div.top { z-index:995; background-color:#d98f23; margin-left:150px; }
+#datamgnt:hover div.bottom { z-index:994; background-color:#b6781e; width:310px;
+  background:-moz-linear-gradient(-90deg, #b6781e, #916018); background:-webkit-gradient(linear, 0 top, 0 bottom, from(#b6781e), to(#916018)); }
+
+
+/* report writing bar */
+#repwrite div.top { z-index:93; }
+#repwrite div.bottom { z-index:92; height:130px; }
+#repwrite:hover div.top { z-index:993; background-color:#7da864; margin-left:150px; }
+#repwrite:hover div.bottom { z-index:992; background-color:#698d54; width:310px;
+  background:-moz-linear-gradient(-90deg, #698d54, #506b40); background:-webkit-gradient(linear, 0 top, 0 bottom, from(#698d54), to(#506b40)); }
+
+
+/* train bar */
+#train div.top { z-index:91; }
+#train div.bottom { z-index:90; height:120px; }
+#train:hover div.top { z-index:991; background-color:#3f1150; margin-left:120px; }
+#train:hover div.bottom { z-index:990; background-color:#340e43; width:310px;
+  background:-moz-linear-gradient(-90deg, #340e43, #1a0721); background:-webkit-gradient(linear, 0 top, 0 bottom, from(#340e43), to(#1a0721)); }
+
+/* train bar */
+#admin div.top { z-index:91; }
+#admin div.bottom { z-index:90; height:110px; }
+#admin:hover div.top { z-index:991; background-color:#3f1150; margin-left:120px; }
+#admin:hover div.bottom { z-index:990; background-color:#340e43; width:310px;
+  background:-moz-linear-gradient(-90deg, #340e43, #1a0721); background:-webkit-gradient(linear, 0 top, 0 bottom, from(#340e43), to(#1a0721)); }
+/* end bar chart*/
+
+/*callout for Focus area   thnxs http://tuljo.com/web-development/flyout-css#*/
+.callout1{
+  height:100px;
+  float:left;
+  overflow:hidden;/*good to have here, shows out well if height too short*/
+  width:220px; /*horisontal space for callout text*/
+}
+a .callout-sub1{
+  display:none; 
+  color: yellow;
+}
+.callout1 a:hover,
+a:hover .callout-sub1{
+  display:block;
+  color: yellow;
+  text-decoration:none;
+}
+.callout-sub1{
+  background:brown;
+  color:#333;
+}
+
+
 
 .orange {
   background-color: #F5AE23;
@@ -108,15 +498,27 @@ a {
   color: #FFFFFF;
 }
 
-.gray {
-  background-color: #F3F3F3;
+.brown {
+  background-color: #B26B24;
+  color: #290014;
   padding-bottom: 10px;
   clear:both;
 }
 
-.dark-gray {
-  background-color: #4A4A4A;
+.lightbrown {
+  background-color: #8F4700;
+  color: #290014;
+  padding-bottom: 10px;
+  clear:both;
 }
+.headerfont{
+  font-family: 'Goblin One', cursive;
+
+}
+
+
+}
+
 
 /* TODO: Replace with image later */
 #header {
@@ -141,15 +543,24 @@ ul {
 }
 
 
-.biopic {
-  float: left;
-  padding: 10px;
-  width: 200px;
-  display: none;
-}
 
 img {
   padding: 10px;
+}
+/*zoom in http://www.developphp.com/view.php?tid=1396*/
+.pic{
+  width:230px;
+  height:130px;
+}
+.picbig{
+  position: absolute;
+  width:0px;
+  -webkit-transition:width 0.3s linear 0s;
+  transition:width 0.3s linear 0s;
+  z-index:10;
+}
+.pic:hover + .picbig{
+  width:500px;
 }
 
 
@@ -177,11 +588,17 @@ span {
   #letsConnect {
     margin-top: 5%;
   }
+   .header1{
+    height: auto;
+  }
 }
 
 @media only screen and (max-width:900px) {
   .biopic {
     width: 175px;
+  }
+   .header1{
+    height: auto;
   }
 }
 
@@ -193,7 +610,13 @@ span {
     width: 150px;
   }
   .welcome-message {
-    display: none;
+   font-size: 18px;
+  color: brown;
+  line-height: 28px;
+  }
+
+  .header1{
+    height: auto;
   }
 }
 
@@ -217,3 +640,4 @@ span {
     display: block;
   }
 }
+ 

@@ -15,7 +15,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
 <scripts> for JavaScript files to build interactions.
 -->
 <head>
-  <link href="css/style.css" rel="stylesheet" type="text/css"></link>
+
 
   <!--
   jQuery is a common JavaScript library for reading and making changes to the
@@ -34,49 +34,273 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
 
   <!-- More on helper.js in the class -->
   <script src="js/helper.js"></script>
+   <link href="css/style.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+   <script src="js/bootstrap.min.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Goblin+One' rel='stylesheet' type='text/css'>
+   <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
+   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
 
   <!--
   Uncomment the <script> tag below when you're ready to add an interactive
   Google Map to your resume!
   -->
-  <!-- <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script> -->
+  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
 
   <meta name="viewport" content="width=device-width">
+  <title> Bola Resume</title>
 </head>
-<body unresolved>
-  <div id="main">
-  Hello world!   <!-- You'll be deleting this line in the course -->
 
+<body>
+  <!--<img src="images/backgroundimg.jpg" alt="">-->
+<div id="bg">
+  <img src="images/backgroundimg.jpg" alt="">
+</div>-->
+
+
+  <div class ="container">
+  <div id="main">
+  
     <!--
     Everything from here to the <script> tag below is the skeleton of your
     website. Your code will add information to each of the sections of the
     resume below. You can pretty easily figure out what each section will
     display by looking at the id or at what's written between the <h2> tags.
     -->
-    <div id="header" class="center-content">
-      <ul id="topContacts" class='flex-box'></ul>
+    <div class = "container header1">
+      <div class="row">
+        <div class="col-md-8 text-center">
+          <div id="title-logo" class= "headerfont brown">
+          <div id="title-title" class= "headerfont brown">
+          </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="view">
+            <img src="images/Contactme.jpg" alt="contactinfo">
+            <div id="topContacts" class="mask clearfix">          
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div style='clear: both;'></div>
-    <div id="workExperience" class='gray'>
-      <h2>Work Experience</h2>
+
+    <div class="scrollable"></div>
+    <div style='clear: both'></div>
+
+
+    <div class ="wrapper1">
+      <div class="row text-justify">
+        <div class="col-md-12   brown clear:both">
+          <h2>Focus Area</h2>
+        </div> 
+      </div> 
     </div>
-    <div id="projects">
-      <h2>Projects</h2>
+
+    <div class = "container">
+      <div class ="row">
+        <div class="col-md-5 lightbrown txtmargin2  clearfix">
+          <div id="talent" class="clear:both">
+          </div>
+        </div>
+        <div class="col-md-6">
+            <div id="wrapper">    
+              <ul id="bar">
+               <li id="webdev" class="clear:both">
+                  <div class="top">
+                    <img src="images/webdev.png" alt="Web Development">
+                  </div>
+                  <div class="bottom">
+                  <div class="infobox h8">
+                    <a href="#">WEB&nbsp;DEVELOPMENT<span class="callout1 callout-sub1">YP.com&nbsp;2yrs</span></a>
+                      <p class= "p1">2&nbsp;years</p>
+                  </div>
+                  </div>
+               </li>
+
+                <li id="datadev" class="clear:both">
+                  <div class="top">
+                   <img src="images/dbase.jpg" alt="Database Development">
+                  </div>
+                  <div class="bottom">
+                  <div class="infobox h8">
+                   <a href="#">DATABASE&nbsp;DEVELOPMENT<span class="callout1 callout-sub1">AT&amp;T-YP.COM&nbsp;6yrs<br>United Way Capital Area&nbsp;1yr<br>Texas Association of School Board&nbsp;1yr<br>CITY OF AUSTIN&nbsp;4yrs</span></a>
+                    <p class= "p1">12&nbsp;years</p>
+                  </div>
+                  </div>
+                </li>
+
+                <li id="datamgnt" class="clear:both">
+                  <div class="top">
+                    <img src="images/datamanagment.jpg" alt="Data Management">
+                  </div>
+                  <div class="bottom">
+                  <div class="infobox h8">
+                    <a href="#">DATA&nbsp;MANAGEMENT<span class="callout1 callout-sub1">AT&amp;T-YP.COM&nbsp;6yrs<br>United Way Capital Area&nbsp;1yr<br>Texas Association of School Board&nbsp;1yr<br>CITY OF AUSTIN&nbsp;4yrs</span></a>
+                    <p class= "p1">12&nbsp;years</p>
+                  </div>
+                  </div>
+                </li>
+
+                <li id="repwrite" class="clear:both">
+                 <div class="top">
+                    <img src="images/reportw.jpg" alt="Analyst">
+                  </div>
+                  <div class="bottom">
+                  <div class="infobox h8">
+                   <a href="#">Data&nbsp;Analyst<span class="callout1 callout-sub1">AT&amp;T-YP.COM&nbsp;6yrs<br>EDS&nbsp;2yrs<br>United Way Capital Area&nbsp;1yr<br>Texas Association of School Board&nbsp;1yr<br>CITY OF AUSTIN&nbsp;4yrs</span></a>
+                    <p class= "p1">14&nbsp;years</p>
+                  </div>
+                  </div>
+                </li>
+
+                <li id="train" class="clear:both">
+                  <div class="top">
+                   <img src="images/training.jpg" alt="Training">
+                  </div>
+                  <div class="bottom">
+                  <div class="infobox h8">
+                    <a href="#">TRAINING<span class="callout1 callout-sub1">AT&amp;T-YP.COM&nbsp;6yrs<br>United Way Capital Area&nbsp;1yr<br>Texas Association of School Board&nbsp;1yr<br>CITY OF AUSTIN&nbsp;4yrs</span></a>
+                    <p class= "p1">7&nbsp;years</p>
+                  </div>
+                 </div>
+                </li>
+
+               <li id="admin" class="clear:both">
+                  <div class="top">
+                    <img src="images/admin.jpg" alt="Aministrative">
+                  </div>
+                  <div class="bottom">
+                  <div class="infobox">
+                    <a>ADMINISTRATIVE </a>
+                    <p class= "p1">8&nbsp;years</p>
+                  </div>
+                  </div>
+                </li>
+             </ul>
+            </div>
+        </div>
+      </div>
     </div>
-    <div id="education" class='gray'>
-      <h2>Education</h2>
+
+
+    <div class ="container">
+      <div class="row text-justify">
+       <div class="col-md-12  brown clear:both">
+         <h2>Work  Experience</h2>
+        </div> 
+      </div> 
     </div>
-    <div id="skillsChart">
-      <h2>Skills Chart</h2>
+
+
+    <div class ="container">
+     <div class="row text-justify">
+        <div class="col-md-11 lightbrown txtmargin2  clearfix">    
+          <div id="workExperience">
+          </div>
+        </div>
+      </div>
+    </div> 
+
+
+    <div class="container">
+      <div class="row text-justify">
+        <div class="col-md-12 brown clear:both">
+         <h2>Projects</h2>
+        </div>
+      </div>
     </div>
-    <div id="mapDiv">
-      <h2>Where I've Lived and Worked</h2>
+
+    <div class="container">
+      <div class="row ">
+        <div class="col-md-12 p txtmargin text-justify">
+          <div id="projects">
+          </div>
+        </div>
+      </div>
     </div>
-    <div id="letsConnect" class='dark-gray'>
-      <h2 class='orange center-text'>Let's Connect</h2>
-      <ul id="footerContacts" class="flex-box">
-      </ul>
+
+
+    <div class ="container">
+      <div class="row text-justify">
+        <div class="col-md-12  brown clear:both">
+          <h2>Education</h2>
+        </div>
+      </div>
     </div>
+
+    <div class ="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div id="education" class="lightbrown txtmargin text-justify">
+            <h3>Schools</h3>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div id="educationonline" class="lightbrown txtmargin text-justify">
+            <h3>On-Courses</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class ="container">
+      <div class = "row">
+        <div class ="col-md-9 brown clear:both">
+          <div id="skillsChart">
+            <h2>Skills Chart</h2>
+          </div>
+        </div>
+        <div class ="col-md-8  clear:both">
+           <ul id="skill">
+            <li><a href=#><br>Advance<span class="callout callout-sub">VBA<br> Access<br> Excel<br> Analyst<br>SQL<br></span></a>
+              <span class="bar Advance"></span><br></li>
+                
+            <li><a href=#><br>Intermediate<br><span class="callout callout-sub">ASP<br> HTML<br> VBscript</span></a>
+              <span class="bar Intermediate"></span><br><br></li>
+          
+            <li><a href=#><br>Novice<span class="callout callout-sub"> Javascript<br> Ajax<br> CSS<br> Python<br> jQuery<br></span></a>
+              <span class="bar Beginner"></span><br><br></li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class ="container">
+      <div class="row text-justify">
+        <div class="col-md-12  brown clear:both">
+          <h2>Where I've Lived and Worked</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row text-justify">
+        <div class="col-md-12">
+          <div id="mapDiv">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row text-justify">
+      <div class="col-md-12  brown clear:both">
+        <h2 class='orange center-text'>Let's Connect</h2>
+      </div>
+      </div>
+      <div  class="row">
+        <div class="col-md-6">
+          <a HREF="mailto:bamharding@hotmail.com"><img src="images/email.jpg" alt="Email"></a>     
+        </div>
+        <div class="col-md-6">
+          <img src="images/twitter.jpg" alt="Twitter">     
+        </div>
+      </div>
+    </div>
+  </div>
   </div>
 
   <!--
@@ -111,28 +335,44 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
 
 
   if(document.getElementsByClassName("flex-item").length === 0) {
-    document.getElementById("topContacts").style.display = "none";
+    document.getElementById("topContacts").style.display = "black";
   }
   if(document.getElementsByTagName("h1").length === 0) {
-    document.getElementById("header").style.display = "none";
+    document.getElementById("title-logo").style.display = "black";
+  }
+ if(document.getElementsByClassName("focusarea-entry").length === 0) {
+    document.getElementById("talent").style.display = "black";
   }
   if(document.getElementsByClassName("work-entry").length === 0) {
-    document.getElementById("workExperience").style.display = "none";
+    document.getElementById("workExperience").style.display = "black";
   }
+
+  if(document.getElementsByClassName("workdescription-entry").length === 0){
+    document.getElementById("workExperience").style.display = "black";
+  }
+
   if(document.getElementsByClassName("project-entry").length === 0) {
-    document.getElementById("projects").style.display = "none";
+    document.getElementById("projects").style.display = "black";
   }
+
+    if(document.getElementsByClassName("projectimg-entry").length === 0) {
+    document.getElementById("projects").style.display = "black";
+  }
+
   if(document.getElementsByClassName("education-entry").length === 0) {
-    document.getElementById("education").style.display = "none";
+    document.getElementById("education").style.display = "black";
+  }
+  if(document.getElementsByClassName("educationonline-entry").length === 0) {
+    document.getElementById("educationonline").style.display = "black";
   }
   if(document.getElementsByClassName("skills-entry").length === 0) {
-    document.getElementById("skillsChart").style.display = "none";
+    document.getElementById("skillsChart").style.display = "black";
   }
   if(document.getElementsByClassName("flex-item").length === 0) {
-    document.getElementById("letsConnect").style.display = "none";
+    document.getElementById("letsConnect").style.display = "black";
   }
   if(document.getElementById("map") == undefined) {
-    document.getElementById("mapDiv").style.display = "none";
+    document.getElementById("mapDiv").style.display = "black";
   }
   </script>
 </body>
